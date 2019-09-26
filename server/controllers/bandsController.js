@@ -75,7 +75,7 @@ Controller.listMembersByBand = (req, res) => {
 // END ALL GETS
 
 // START ALL POSTS
-// POST: http://localhost:3000/bands/all
+// POST: http://localhost:3000/bands/allbands
 Controller.createBand = (req, res) => {
   let bandName = req.body.bandName;
   let leagueName = req.body.leagueName;

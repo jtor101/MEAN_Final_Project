@@ -62,6 +62,9 @@ Controller.createUser = (req, res) => {
     })
     .catch(err => {
       console.log(`Creating User error: ${err}`);
+      console.log(username);
+      console.log(password);
+      console.log(email);
       res.end("Creating User error.");
     });
 };
