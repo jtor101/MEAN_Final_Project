@@ -1,0 +1,27 @@
+[
+  {
+    "NAME": "4 Piece Acts",
+    "ID": 1,
+    "DESCRIPTION": "This division features bands with a maximum of four members i.e. Vocalist, Lead Guitarist, Bassist, and Drummer."
+  },
+  {
+    "NAME": "6 Piece Acts",
+    "ID": 2,
+    "DESCRIPTION": "This division features bands with a maximum of six members i.e. Vocalist, Lead Guitarist, Rhythm Guitarist, Bassist, Keyboardist, and Drummer."
+  },
+  {
+    "NAME": "Femme Fatales",
+    "ID": 3,
+    "DESCRIPTION": "This division features all female bands with a maximum of six members."
+  },
+  {
+    "NAME": "Classic Rockers",
+    "ID": 4,
+    "DESCRIPTION": "This division features bands with members over 50 with a maximum of six members."
+  },
+  {
+    "NAME": "Young Bucks",
+    "ID": 5,
+    "DESCRIPTION": "This division features bands with members under 30 with a maximum of six members."
+  }
+]
