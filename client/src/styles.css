@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Gentium Book Basic", serif;
+  background-color: darkgray;
+}
+
+#headerBg {
+  border: 2px ridge black;
+  border-radius: 8px;
+  background-image: url(assets/images/shredlight.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

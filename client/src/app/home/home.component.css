@@ -1,0 +1,6 @@
+#contentArea1,
+#contentArea2 {
+  border: 2px ridge black;
+  border-radius: 8px;
+  background-color: lightgrey;
+}
