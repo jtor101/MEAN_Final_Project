@@ -1,0 +1,6 @@
+#registerArea1,
+#registerArea2 {
+  border: 2px ridge black;
+  border-radius: 8px;
+  background-color: lightgrey;
+}

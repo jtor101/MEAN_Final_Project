@@ -1,63 +1,68 @@
 <main class="row">
-  <form class="col-6 offset-3 py-5" name="regform" id="regform">
-    <div class="form-group">
-      <label for="bandusername" id="bandusernamelabel">Username: </label>
-      <input
-        type="text"
-        class="form-control"
-        id="bandusername"
-        name="username"
-        placeholder="Enter username"
-      />
-      <div id="usernameError" class="errorMsg mt-2"></div>
-    </div>
-    <div class="form-group">
-      <label for="banduserpassword" id="banduserpasswordlabel"
-        >Password:
-      </label>
-      <input
-        type="password"
-        class="form-control"
-        id="banduserpassword"
-        name="password"
-        placeholder="Enter Password"
-      />
-      <div id="passwordError" class="errorMsg mt-2"></div>
-    </div>
-    <div class="form-group">
-      <label for="banduserpasswordconf" id="banduserpasswordconflabel"
-        >Confirm Password:
-      </label>
-      <input
-        type="password"
-        class="form-control"
-        id="banduserpasswordconf"
-        name="passwordconf"
-        placeholder="Confirm Password"
-      />
-      <div id="passwordconfError" class="errorMsg mt-2"></div>
-    </div>
-    <div class="form-group">
-      <label for="banduseremail" id="banduseremaillabel">Email: </label>
-      <input
-        type="email"
-        class="form-control"
-        id="banduseremail"
-        name="email"
-        placeholder="Enter Email"
-      />
-      <div id="emailError" class="errorMsg mt-2"></div>
-    </div>
-
-    <button type="submit" class="btn btn-primary" id="loginSubmit">
-      Submit
-    </button>
-    <div id="infoError" class="errorMsg mt-2"></div>
-  </form>
-  <a class="btn btn-success btn-lg col-4 offset-4 mt-3" href="" role="button"
+  <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
+    <h1>Register</h1>
+  </section>
+  <a class="btn btn-success btn-lg col-4 offset-4" href="" role="button"
     >Back To Home</a
   >
   <a class="btn btn-info btn-lg col-4 offset-4 mt-3" href="/login" role="button"
     >Login</a
   >
+  <section id="registerArea2" class="col-10 offset-1 my-3 p-2 text-center">
+    <form class="col-6 offset-3 py-5" name="regform" id="regform">
+      <div class="form-group">
+        <label for="bandusername" id="bandusernamelabel">Username: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="bandusername"
+          name="username"
+          placeholder="Enter username"
+        />
+        <div id="usernameError" class="errorMsg mt-2"></div>
+      </div>
+      <div class="form-group">
+        <label for="banduserpassword" id="banduserpasswordlabel"
+          >Password:
+        </label>
+        <input
+          type="password"
+          class="form-control"
+          id="banduserpassword"
+          name="password"
+          placeholder="Enter Password"
+        />
+        <div id="passwordError" class="errorMsg mt-2"></div>
+      </div>
+      <div class="form-group">
+        <label for="banduserpasswordconf" id="banduserpasswordconflabel"
+          >Confirm Password:
+        </label>
+        <input
+          type="password"
+          class="form-control"
+          id="banduserpasswordconf"
+          name="passwordconf"
+          placeholder="Confirm Password"
+        />
+        <div id="passwordconfError" class="errorMsg mt-2"></div>
+      </div>
+      <div class="form-group">
+        <label for="banduseremail" id="banduseremaillabel">Email: </label>
+        <input
+          type="email"
+          class="form-control"
+          id="banduseremail"
+          name="email"
+          placeholder="Enter Email"
+        />
+        <div id="emailError" class="errorMsg mt-2"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="loginSubmit">
+        Submit
+      </button>
+      <div id="infoError" class="errorMsg mt-2"></div>
+    </form>
+  </section>
 </main>

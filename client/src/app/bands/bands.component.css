@@ -1,5 +1,7 @@
-#loginArea1,
-#loginArea2 {
+#divisionArea1,
+#divisionArea2,
+.card,
+#cardHeading {
   border: 2px ridge black;
   border-radius: 8px;
   background-color: lightgrey;

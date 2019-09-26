@@ -8,11 +8,17 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
+import { BandsComponent } from "./bands/bands.component";
+import { EditprofileComponent } from "./editprofile/editprofile.component";
+import { AdminComponent } from "./admin/admin.component";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "register", component: RegisterComponent },
-  { path: "login", component: LoginComponent }
+  { path: "login", component: LoginComponent },
+  { path: "bands", component: BandsComponent },
+  { path: "editprofile", component: EditprofileComponent },
+  { path: "admin", component: AdminComponent }
 ];
 
 @NgModule({
@@ -20,7 +26,10 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    BandsComponent,
+    EditprofileComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
