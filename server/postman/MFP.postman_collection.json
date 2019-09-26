@@ -1,28 +1,10 @@
 {
 	"info": {
-		"_postman_id": "bfa5cf21-6edf-4ab5-8174-308d6c83ca30",
-		"name": "ML5",
+		"_postman_id": "0000fc4d-8b4d-4b50-94da-9bb1768ceab6",
+		"name": "MFP",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "GET Index",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:3000/",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
-		},
 		{
 			"name": "GET Leagues",
 			"request": {
@@ -102,86 +84,33 @@
 			"response": []
 		},
 		{
-			"name": "POST Create Band",
+			"name": "GET List All Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "text/plain",
+						"value": "application/x-www-form-urlencoded",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "bandName",
-							"value": "Senses Fail",
-							"type": "text"
-						},
-						{
-							"key": "leagueName",
-							"value": "4PieceActs",
-							"type": "text"
-						},
-						{
-							"key": "leagueId",
-							"value": "1",
-							"type": "text"
-						},
-						{
-							"key": "managerName",
-							"value": "Buddy Nielson",
-							"type": "text"
-						},
-						{
-							"key": "managerPhone",
-							"value": "4358852455",
-							"type": "text"
-						},
-						{
-							"key": "managerEmail",
-							"value": "lifeisnotawaitingroom@aol.com",
-							"type": "text"
-						},
-						{
-							"key": "maxTeamMembers",
-							"value": "4",
-							"type": "text"
-						},
-						{
-							"key": "minMemberAge",
-							"value": "22",
-							"type": "text"
-						},
-						{
-							"key": "maxMemberAge",
-							"value": "70",
-							"type": "text"
-						},
-						{
-							"key": "teamGender",
-							"value": "Any",
-							"type": "text"
-						}
-					],
-					"options": {
-						"raw": {
-							"language": "text"
-						}
-					}
+					"urlencoded": []
 				},
 				"url": {
-					"raw": "localhost:3000/bands/allbands",
+					"raw": "localhost:3000/users/allusers",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"bands",
-						"allbands"
+						"users",
+						"allusers"
 					]
 				}
 			},
@@ -229,7 +158,7 @@
 						},
 						{
 							"key": "managerEmail",
-							"value": "constantmotion@gmail.com",
+							"value": "constantmotion@aol.com",
 							"type": "text"
 						},
 						{
@@ -271,21 +200,37 @@
 			"response": []
 		},
 		{
-			"name": "DELETE Empty Band",
+			"name": "PUT Edit User Email",
 			"request": {
-				"method": "DELETE",
-				"header": [],
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "airman@gmail.com",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "http://localhost:3000/bands/allbands/14",
-					"protocol": "http",
+					"raw": "localhost:3000/users/edituser/11",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"bands",
-						"allbands",
-						"14"
+						"users",
+						"edituser",
+						"11"
 					]
 				}
 			},
@@ -343,96 +288,6 @@
 			"response": []
 		},
 		{
-			"name": "PUT Edit User Email",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "email",
-							"value": "wily@aol.com",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "localhost:3000/users/edituser/14",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"users",
-						"edituser",
-						"14"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DELETE User",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:3000/users/deleteuser/9",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"users",
-						"deleteuser",
-						"9"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET List All Users",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "localhost:3000/users/allusers",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"users",
-						"allusers"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "POST User Login",
 			"request": {
 				"method": "POST",
@@ -468,6 +323,26 @@
 					"path": [
 						"users",
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/deleteuser/9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"deleteuser",
+						"9"
 					]
 				}
 			},
