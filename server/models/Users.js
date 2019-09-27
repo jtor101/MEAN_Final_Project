@@ -21,6 +21,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING(100),
         allowNull: false,
         unique: true
+      },
+      IS_ADMIN: {
+        type: DataTypes.INTEGER(100),
+        allowNull: true
       }
     },
     {

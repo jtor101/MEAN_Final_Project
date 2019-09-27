@@ -3,66 +3,77 @@
     "USERID": 1,
     "USERNAME": "FooBar",
     "PASSWORD": "PASSWORD123",
-    "EMAIL": "foobar@hig.com"
+    "EMAIL": "foobar@hig.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 2,
     "USERNAME": "BatMan",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "batman@test.com"
+    "EMAIL": "batman@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 3,
     "USERNAME": "megaman",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "megaman@test.com"
+    "EMAIL": "megaman@test.com",
+    "IS_ADMIN": 1
   },
   {
     "USERID": 4,
     "USERNAME": "protoman",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "protoman@test.com"
+    "EMAIL": "protoman@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 5,
     "USERNAME": "woodman",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "woodman@test.com"
+    "EMAIL": "woodman@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 6,
     "USERNAME": "quickman",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "quickman@test.com"
+    "EMAIL": "quickman@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 7,
     "USERNAME": "heatman",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "heatman@test.com"
+    "EMAIL": "heatman@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 8,
     "USERNAME": "JoeMan",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "joe@test.com"
+    "EMAIL": "joe@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 9,
     "USERNAME": "FlyMan",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "fly@test.com"
+    "EMAIL": "fly@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 10,
     "USERNAME": "GrowMan",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "grow@test.com"
+    "EMAIL": "grow@test.com",
+    "IS_ADMIN": 0
   },
   {
     "USERID": 11,
     "USERNAME": "AirMan",
     "PASSWORD": "PASSWORD",
-    "EMAIL": "airman@test.com"
+    "EMAIL": "airman@test.com",
+    "IS_ADMIN": 0
   }
 ]

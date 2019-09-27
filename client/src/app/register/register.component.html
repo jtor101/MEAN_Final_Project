@@ -17,9 +17,12 @@
           class="form-control"
           id="bandusername"
           name="username"
+          [(ngModel)]="username"
           placeholder="Enter username"
         />
-        <div id="usernameError" class="errorMsg mt-2"></div>
+        <div id="usernameError" class="errorMsg mt-2">
+          {{ usernameError }}
+        </div>
       </div>
       <div class="form-group">
         <label for="banduserpassword" id="banduserpasswordlabel"
@@ -30,9 +33,12 @@
           class="form-control"
           id="banduserpassword"
           name="password"
+          [(ngModel)]="password"
           placeholder="Enter Password"
         />
-        <div id="passwordError" class="errorMsg mt-2"></div>
+        <div id="passwordError" class="errorMsg mt-2">
+          {{ passwordError }}
+        </div>
       </div>
       <div class="form-group">
         <label for="banduserpasswordconf" id="banduserpasswordconflabel"
@@ -43,9 +49,12 @@
           class="form-control"
           id="banduserpasswordconf"
           name="passwordconf"
+          [(ngModel)]="passwordconf"
           placeholder="Confirm Password"
         />
-        <div id="passwordconfError" class="errorMsg mt-2"></div>
+        <div id="passwordconfError" class="errorMsg mt-2">
+          {{ passwordconfError }}
+        </div>
       </div>
       <div class="form-group">
         <label for="banduseremail" id="banduseremaillabel">Email: </label>
@@ -54,15 +63,29 @@
           class="form-control"
           id="banduseremail"
           name="email"
+          [(ngModel)]="email"
           placeholder="Enter Email"
         />
-        <div id="emailError" class="errorMsg mt-2"></div>
+        <div id="emailError" class="errorMsg mt-2">{{ emailError }}</div>
       </div>
 
-      <button type="submit" class="btn btn-primary" id="loginSubmit">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        id="loginSubmit"
+        (click)="onSubmit()"
+      >
         Submit
       </button>
-      <div id="infoError" class="errorMsg mt-2"></div>
+      <input
+        type="reset"
+        class="btn btn-secondary"
+        id="resetBtn"
+        (click)="onReset()"
+      />
+      <div id="infoError" class="errorMsg mt-2" *ngIf="error">
+        {{ infoError }}
+      </div>
     </form>
   </section>
 </main>

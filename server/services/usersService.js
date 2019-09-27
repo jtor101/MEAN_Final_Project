@@ -34,6 +34,7 @@ Service.loginUser = userObj => {
 
 // POST: localhost:3000/users/register
 Service.createUser = userObj => {
+  console.log(userObj);
   return Users.create(userObj)
     .then(user => {
       return user;
