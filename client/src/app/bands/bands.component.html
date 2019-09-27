@@ -28,7 +28,9 @@
     <div class="form-group col-8 offset-2">
       <h1><label for="divisionSel">Select a Division</label></h1>
       <select class="form-control" id="divisionSel">
-        <option>-- Click here --</option>
+        <option *ngFor="let league of leagues" value="{{ league.ID }}">{{
+          league.NAME
+        }}</option>
       </select>
     </div>
   </section>
@@ -36,6 +38,12 @@
   <!-- Third Content Area, changes with division select -->
   <section id="divisionArea3" class="col-8 offset-2 my-3 p-2 text-center">
     <h1 class="py-2" id="cardHeading">Bands</h1>
-    <div class="card"></div>
+    <div class="card my-2" *ngFor="let band of bands">
+      <div class="card-body">
+        <h4 class="card-title py-2">{{ band.TEAMNAME }}</h4>
+        <h5 class="card-subtitle">{{ band.MANAGERNAME }}</h5>
+        <p class="card=text">{{ band.MANAGERPHONE }}</p>
+      </div>
+    </div>
   </section>
 </main>

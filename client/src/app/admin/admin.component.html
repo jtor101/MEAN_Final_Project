@@ -1,14 +1,27 @@
 <main class="row">
-        <section id="adminArea1" class="col-10 offset-1 my-3 p-2 text-center">
-          <h1>Admin</h1>
-        </section>
-      
-        <a class="btn btn-success btn-lg col-4 offset-4" href="/bands" role="button"
-          >Back To Bands</a
-        >
-      
-        <section id="adminArea2" class="col-10 offset-1 my-3 p-2 text-center">
-          Stuff goes here.
-        </section>
-      </main>
-      
+  <section id="adminArea1" class="col-10 offset-1 my-3 p-2 text-center">
+    <h1>Admin</h1>
+  </section>
+
+  <a class="btn btn-success btn-lg col-4 offset-4" href="/bands" role="button"
+    >Back To Bands</a
+  >
+
+  <section id="adminArea2" class="col-10 offset-1 my-3 p-2 text-center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">User Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr *ngFor="let user of users">
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+      <!-- Dynamically populated -->
+    </table>
+  </section>
+</main>
