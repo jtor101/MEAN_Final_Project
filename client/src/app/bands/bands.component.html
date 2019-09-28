@@ -1,8 +1,8 @@
 <main class="row">
-  <!-- First Content Area -->
   <section id="divisionArea1" class="col-10 offset-1 my-3 p-2 text-center">
     <h1>Our Divisions</h1>
   </section>
+  <!-- Nav -->
   <a
     class="btn btn-danger btn-lg col-4 offset-4 mb-3"
     href="/admin"
@@ -23,7 +23,7 @@
     >Logout</a
   >
 
-  <!-- Second Content Area with division select dropdown -->
+  <!-- Content Area with division select dropdown -->
   <section id="divisionArea2" class="col-8 offset-2 my-3 p-2 text-center">
     <div class="form-group col-8 offset-2">
       <h1><label for="divisionSel">Select a Division</label></h1>
@@ -35,7 +35,7 @@
     </div>
   </section>
 
-  <!-- Third Content Area, changes with division select -->
+  <!-- Second Content Area, populates cards -->
   <section id="divisionArea3" class="col-8 offset-2 my-3 p-2 text-center">
     <h1 class="py-2" id="cardHeading">Bands</h1>
     <div class="card my-2" *ngFor="let band of bands">

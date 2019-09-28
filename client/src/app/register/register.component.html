@@ -2,6 +2,7 @@
   <section id="registerArea1" class="col-10 offset-1 my-3 p-2 text-center">
     <h1>Register</h1>
   </section>
+  <!-- Nav -->
   <a class="btn btn-success btn-lg col-4 offset-4" href="" role="button"
     >Back To Home</a
   >
@@ -10,6 +11,7 @@
   >
   <section id="registerArea2" class="col-10 offset-1 my-3 p-2 text-center">
     <form class="col-6 offset-3 py-5" name="regform" id="regform">
+      <!-- Username Field -->
       <div class="form-group">
         <label for="bandusername" id="bandusernamelabel">Username: </label>
         <input
@@ -24,6 +26,7 @@
           {{ usernameError }}
         </div>
       </div>
+      <!-- Password Field -->
       <div class="form-group">
         <label for="banduserpassword" id="banduserpasswordlabel"
           >Password:
@@ -40,6 +43,7 @@
           {{ passwordError }}
         </div>
       </div>
+      <!-- Confirm Password Field -->
       <div class="form-group">
         <label for="banduserpasswordconf" id="banduserpasswordconflabel"
           >Confirm Password:
@@ -56,6 +60,7 @@
           {{ passwordconfError }}
         </div>
       </div>
+      <!-- Email Field -->
       <div class="form-group">
         <label for="banduseremail" id="banduseremaillabel">Email: </label>
         <input
@@ -69,6 +74,7 @@
         <div id="emailError" class="errorMsg mt-2">{{ emailError }}</div>
       </div>
 
+      <!-- Submit Button -->
       <button
         type="submit"
         class="btn btn-primary"
@@ -77,6 +83,7 @@
       >
         Submit
       </button>
+      <!-- Reset Button -->
       <input
         type="reset"
         class="btn btn-secondary"

@@ -3,12 +3,14 @@
     <h1>Edit Profile</h1>
   </section>
 
+  <!-- Nav -->
   <a class="btn btn-success btn-lg col-4 offset-4" href="/bands" role="button"
     >Back To Bands</a
   >
 
   <section id="epArea2" class="col-10 offset-1 my-3 p-2 text-center">
     <form class="col-6 offset-3 py-5" name="loginform" id="loginform">
+      <!-- Username Field -->
       <div class="form-group">
         <label for="bandusername" id="bandusernamelabel">Username: </label>
         <input
@@ -20,24 +22,23 @@
         />
         <div id="usernameError" class="errorMsg mt-2"></div>
       </div>
+      <!-- New Email Field -->
       <div class="form-group">
-        <label for="banduserpassword" id="banduserpasswordlabel"
-          >Password:
-        </label>
+        <label for="editedemail" id="editedemaillabel">Email: </label>
         <input
-          type="password"
+          type="text"
           class="form-control"
-          id="banduserpassword"
-          name="password"
-          placeholder="Password"
+          id="editedemail"
+          name="editedemail"
+          placeholder="Enter new email"
         />
-        <div id="passwordError" class="errorMsg mt-2"></div>
+        <div id="emailEditError" class="errorMsg mt-2"></div>
       </div>
 
-      <button type="submit" class="btn btn-primary" id="loginSubmit">
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary" id="editSubmit">
         Submit
       </button>
-      <div id="loginError" class="errorMsg mt-2"></div>
     </form>
   </section>
 </main>

@@ -1,13 +1,16 @@
+// Imports
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-
 import { UserService } from "./../providers/user.service";
 
+// Selector settings
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"]
 })
+
+// Export
 export class LoginComponent implements OnInit {
   username: string = "";
   password: string = "";
@@ -17,11 +20,13 @@ export class LoginComponent implements OnInit {
   passwordError: string = "";
   loginError: string = "";
 
-  // create instance of UserService
+  // Constructor
   constructor(private userService: UserService, private router: Router) {}
 
+  // On Init
   ngOnInit() {}
 
+  // Submit button function
   onSubmit(): void {
     if (this.username == "") {
       this.usernameError = "User name is required.";
@@ -48,6 +53,7 @@ export class LoginComponent implements OnInit {
       });
     }
   }
+  // Reset button function
   onReset(): void {
     this.username = "";
     this.password = "";

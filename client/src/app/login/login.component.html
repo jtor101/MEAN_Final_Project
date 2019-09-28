@@ -2,7 +2,7 @@
   <section id="loginArea1" class="col-10 offset-1 my-3 p-2 text-center">
     <h1>Login</h1>
   </section>
-
+  <!-- Nav -->
   <a class="btn btn-success btn-lg col-4 offset-4" href="" role="button"
     >Back To Home</a
   >
@@ -14,6 +14,7 @@
   >
   <section id="loginArea2" class="col-10 offset-1 my-3 p-2 text-center">
     <form class="col-6 offset-3 py-5" name="loginform" id="loginform">
+      <!-- Username Field -->
       <div class="form-group">
         <label for="bandusername" id="bandusernamelabel">Username: </label>
         <input
@@ -26,6 +27,7 @@
         />
         <div id="usernameError" class="errorMsg mt-2">{{ usernameError }}</div>
       </div>
+      <!-- Password Field -->
       <div class="form-group">
         <label for="banduserpassword" id="banduserpasswordlabel"
           >Password:
@@ -41,14 +43,17 @@
         <div id="passwordError" class="errorMsg mt-2">{{ passwordError }}</div>
       </div>
 
+      <!-- Submit button -->
       <button
         type="submit"
         class="btn btn-primary"
         id="loginSubmit"
         (click)="onSubmit()"
       >
-        Submit</button
-      ><button
+        Submit
+      </button>
+      <!-- Reset button -->
+      <button
         type="reset"
         class="btn btn-secondary"
         id="resetBtn"
