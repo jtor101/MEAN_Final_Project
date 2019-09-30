@@ -1,5 +1,6 @@
 // Imports
 import { Component, OnInit } from "@angular/core";
+import { User } from "../models/user.model";
 
 // Selector settings
 @Component({
@@ -10,6 +11,7 @@ import { Component, OnInit } from "@angular/core";
 
 // Export
 export class EditprofileComponent implements OnInit {
+  users: Array<User> = [];
   // Constructor
   constructor() {}
 

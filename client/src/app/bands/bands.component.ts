@@ -28,6 +28,11 @@ export class BandsComponent implements OnInit {
     if (val == "false") {
       location.replace("http://localhost:4200/login");
     }
+    var abtnb = sessionStorage.getItem("username");
+    if (abtnb != "megaman") {
+      var abtn = document.getElementById("abtn");
+      abtn.style.display = "none";
+    }
     // Populates League Dropdown
     this.bandService.getLeagues().subscribe(data => {
       data.forEach((league, index) => {
@@ -50,5 +55,6 @@ export class BandsComponent implements OnInit {
   // Adjusts Session storage on logout
   onLogout(): void {
     sessionStorage.setItem("loggedIn", "false");
+    sessionStorage.setItem("username", "");
   }
 }

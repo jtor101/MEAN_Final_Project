@@ -14,6 +14,7 @@ import { UserService } from "./../providers/user.service";
 export class LoginComponent implements OnInit {
   username: string = "";
   password: string = "";
+  email: string = "";
 
   error: boolean = false;
   usernameError: string = "";
@@ -49,6 +50,7 @@ export class LoginComponent implements OnInit {
         } else {
           this.router.navigate(["bands"]);
           sessionStorage.setItem("loggedIn", "true");
+          sessionStorage.setItem("username", this.username);
         }
       });
     }

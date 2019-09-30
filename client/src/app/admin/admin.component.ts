@@ -26,6 +26,10 @@ export class AdminComponent implements OnInit {
     if (val == "false") {
       location.replace("http://localhost:4200/login");
     }
+    var adprv = sessionStorage.getItem("username");
+    if (adprv != "megaman") {
+      location.replace("http://localhost:4200/bands");
+    }
     // Populates User Table
     this.userService.getUsers().subscribe(data => {
       data.forEach((user, index) => {

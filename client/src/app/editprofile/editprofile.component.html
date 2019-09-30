@@ -9,16 +9,17 @@
   >
 
   <section id="epArea2" class="col-10 offset-1 my-3 p-2 text-center">
-    <form class="col-6 offset-3 py-5" name="loginform" id="loginform">
+    <form class="col-6 offset-3 py-5" name="editform" id="editform">
       <!-- Username Field -->
       <div class="form-group">
-        <label for="bandusername" id="bandusernamelabel">Username: </label>
+        <label for="editusername" id="editusernamelabel">Username: </label>
         <input
           type="text"
           class="form-control"
-          id="bandusername"
-          name="username"
+          id="editusername"
+          name="editusername"
           placeholder="Enter username"
+          readonly
         />
         <div id="usernameError" class="errorMsg mt-2"></div>
       </div>
