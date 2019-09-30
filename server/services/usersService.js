@@ -15,6 +15,17 @@ Service.listUsers = () => {
     });
 };
 
+// GET: localhost:3000/users/:id
+Service.getUser = userId => {
+  return Users.findOne({ where: { USERID: userId } })
+    .then(user => {
+      return user;
+    })
+    .catch(error => {
+      throw error;
+    });
+};
+
 // POST: localhost:3000/users/login
 Service.loginUser = userObj => {
   return Users.findOne({

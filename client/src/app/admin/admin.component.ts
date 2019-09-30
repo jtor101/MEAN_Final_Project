@@ -19,17 +19,12 @@ export class AdminComponent implements OnInit {
   // Constructor
   constructor(private userService: UserService, private router: Router) {}
 
+  goBands(): void {
+    this.router.navigate(["/bands"]);
+  }
+
   // On Init
   ngOnInit() {
-    // Session storage for login status
-    var val = sessionStorage.getItem("loggedIn");
-    if (val == "false") {
-      location.replace("http://localhost:4200/login");
-    }
-    var adprv = sessionStorage.getItem("username");
-    if (adprv != "megaman") {
-      location.replace("http://localhost:4200/bands");
-    }
     // Populates User Table
     this.userService.getUsers().subscribe(data => {
       data.forEach((user, index) => {

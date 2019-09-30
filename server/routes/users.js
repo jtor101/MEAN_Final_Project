@@ -5,6 +5,10 @@ var router = express.Router();
 // GET: localhost:3000/users/allusers (show all users)
 router.get("/allusers", controller.listUsers);
 
+/* GET User Profile Data by User Name. */
+// http://localhost:3000/users/:id
+router.get("/:id", controller.getUser);
+
 // START ALL POSTS
 // POST: localhost:3000/users/register
 router.post("/register", controller.createUser);

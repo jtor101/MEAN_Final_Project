@@ -5,6 +5,8 @@ import { BandService } from "./../providers/band.service";
 import { League } from "./../models/league.model";
 import { Band } from "./../models/band.model";
 
+import { UserService } from "./../providers/user.service";
+
 // Selector settings
 @Component({
   selector: "app-bands",
@@ -19,19 +21,16 @@ export class BandsComponent implements OnInit {
   bands: Array<Band> = [];
 
   // Constructor
-  constructor(private bandService: BandService, private router: Router) {}
+  constructor(
+    private userService: UserService,
+    private bandService: BandService,
+    private router: Router
+  ) {}
 
   // On Init
   ngOnInit() {
-    // Session storage for login status
-    var val = sessionStorage.getItem("loggedIn");
-    if (val == "false") {
-      location.replace("http://localhost:4200/login");
-    }
-    var abtnb = sessionStorage.getItem("username");
-    if (abtnb != "megaman") {
-      var abtn = document.getElementById("abtn");
-      abtn.style.display = "none";
+    if (!this.userService.getAuth()) {
+      this.router.navigate(["login"]);
     }
     // Populates League Dropdown
     this.bandService.getLeagues().subscribe(data => {
@@ -56,5 +55,18 @@ export class BandsComponent implements OnInit {
   onLogout(): void {
     sessionStorage.setItem("loggedIn", "false");
     sessionStorage.setItem("username", "");
+    sessionStorage.setItem("userid", "");
+  }
+
+  goAdmin(): void {
+    this.router.navigate(["/admin"]);
+  }
+
+  goEdit(): void {
+    this.router.navigate(["/editprofile"]);
+  }
+
+  getAdmin(): boolean {
+    return this.userService.getAdmin();
   }
 }

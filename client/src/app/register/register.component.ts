@@ -46,6 +46,7 @@ export class RegisterComponent implements OnInit {
       this.passwordError = "Password is required.";
       this.error = true;
     } else if (this.password.length < 6) {
+      this.usernameError = "";
       this.passwordError = "Password must be at least 6 chars.";
       this.error = true;
     } else if (this.passwordconf == "") {
@@ -53,17 +54,23 @@ export class RegisterComponent implements OnInit {
       this.passwordconfError = "Please confirm password.";
       this.error = true;
     } else if (this.password != this.passwordconf) {
+      this.passwordError = "";
       this.passwordconfError = "Passwords do not match";
       this.error = true;
     } else if (this.email == "") {
       this.passwordconfError = "";
       this.emailError = "Email Address is required.";
       this.error = true;
+    } else if (this.email.length < 6) {
+      this.passwordconfError = "";
+      this.emailError = "Email must be at least 6 chars.";
+      this.error = true;
     } else {
       this.error = false;
       this.usernameError = "";
       this.passwordError = "";
       this.passwordconfError = "";
+      this.emailError = "";
 
       // Call UserService to Register
       this.userService

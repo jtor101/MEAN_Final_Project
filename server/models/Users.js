@@ -23,8 +23,9 @@ module.exports = function(sequelize, DataTypes) {
         unique: true
       },
       IS_ADMIN: {
-        type: DataTypes.INTEGER(100),
-        allowNull: true
+        type: DataTypes.INTEGER(1),
+        allowNull: true,
+        defaultValue: 0
       }
     },
     {

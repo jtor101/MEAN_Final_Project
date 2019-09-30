@@ -19,6 +19,22 @@ Controller.listUsers = (req, res) => {
     });
 };
 
+Controller.getUser = (req, res) => {
+  service
+    .getUser(req.params.id)
+    .then(user => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.end("No Users found for User ID.");
+      }
+    })
+    .catch(err => {
+      console.log(`Listing User for User ID error: ${err}`);
+      res.end("Listing User for User ID error.");
+    });
+};
+
 // POST: http://localhost:3000/users/login
 Controller.loginUser = (req, res) => {
   let username = req.body.username;
@@ -30,8 +46,10 @@ Controller.loginUser = (req, res) => {
     })
     .then(userl => {
       if (userl) {
+        console.log(1);
         res.json(userl);
       } else {
+        console.log(2);
         res.send("User not logged in.");
         res.status(403).send;
       }
@@ -67,8 +85,10 @@ Controller.createUser = (req, res) => {
 };
 
 Controller.updateUser = (req, res) => {
+  console.log("*****");
   let id = req.params.id;
   let email = req.body.email;
+  console.log(`${id}: ${email}`);
   service
     .updateUser(id, {
       EMAIL: email

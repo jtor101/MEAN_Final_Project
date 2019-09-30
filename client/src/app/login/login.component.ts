@@ -44,10 +44,20 @@ export class LoginComponent implements OnInit {
       // Call UserService to authenticate
       this.userService.login(this.username, this.password).subscribe(data => {
         if (data["error"]) {
-          console.log(data);
           this.loginError = "Login unsuccessful.";
           this.error = true;
         } else {
+          console.log(data);
+          this.userService.setAuth(true);
+          this.userService.setUserId(data.USERID);
+          this.userService.setUserName(data.USERNAME);
+
+          if (data.IS_ADMIN === 1) {
+            this.userService.setAdmin(true);
+          } else {
+            this.userService.setAdmin(false);
+          }
+
           this.router.navigate(["bands"]);
           sessionStorage.setItem("loggedIn", "true");
           sessionStorage.setItem("username", this.username);

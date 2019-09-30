@@ -4,7 +4,10 @@
   </section>
 
   <!-- Nav -->
-  <a class="btn btn-success btn-lg col-4 offset-4" href="/bands" role="button"
+  <a
+    class="btn btn-success btn-lg col-4 offset-4"
+    role="button"
+    (click)="goBands()"
     >Back To Bands</a
   >
 
@@ -19,6 +22,7 @@
           id="editusername"
           name="editusername"
           placeholder="Enter username"
+          [(ngModel)]="username"
           readonly
         />
         <div id="usernameError" class="errorMsg mt-2"></div>
@@ -32,12 +36,18 @@
           id="editedemail"
           name="editedemail"
           placeholder="Enter new email"
+          [(ngModel)]="email"
         />
         <div id="emailEditError" class="errorMsg mt-2"></div>
       </div>
 
       <!-- Submit button -->
-      <button type="submit" class="btn btn-primary" id="editSubmit">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        id="editSubmit"
+        (click)="onSave()"
+      >
         Submit
       </button>
     </form>

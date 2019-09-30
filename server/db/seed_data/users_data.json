@@ -39,7 +39,7 @@
     "USERNAME": "quickman",
     "PASSWORD": "PASSWORD",
     "EMAIL": "quickman@test.com",
-    "IS_ADMIN": 0
+    "IS_ADMIN": 1
   },
   {
     "USERID": 7,

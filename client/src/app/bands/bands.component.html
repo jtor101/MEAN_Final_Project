@@ -5,15 +5,16 @@
   <!-- Nav -->
   <a
     class="btn btn-danger btn-lg col-4 offset-4 mb-3"
-    href="/admin"
     id="abtn"
     role="button"
+    (click)="goAdmin()"
+    *ngIf="getAdmin()"
     >Admin</a
   >
   <a
     class="btn btn-warning btn-lg col-4 offset-4 mb-3"
-    href="/editprofile"
     role="button"
+    (click)="goEdit()"
     >Edit Profile</a
   >
   <a

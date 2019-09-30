@@ -1,15 +1,11 @@
-// Imports
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, Subject, of } from "rxjs";
 import { map } from "rxjs/operators";
 
-// Injectable settings
 @Injectable({
   providedIn: "root"
 })
-
-// Export
 export class UserService {
   private usersEndpoint: string = "http://localhost:3000/users/";
   private httpOptions = {
@@ -18,11 +14,14 @@ export class UserService {
     })
   };
 
-  // Constructor
+  private userId: number = 0;
+  private userName: string = "";
+  private isAuthenticated: boolean = false;
+  private isAdmin: boolean = false;
+
   constructor(private http: HttpClient) {}
 
-  // Login function
-  login(username: string, password: string) {
+  login(username: string, password: string): Observable<any> {
     return this.http
       .post(
         `${this.usersEndpoint}login`,
@@ -32,8 +31,7 @@ export class UserService {
       .pipe(map(res => <any[]>res));
   }
 
-  // Register function
-  register(username: string, email: string, password: string) {
+  register(username: string, password: string, email: string): Observable<any> {
     return this.http
       .post(
         `${this.usersEndpoint}register`,
@@ -43,17 +41,65 @@ export class UserService {
       .pipe(map(res => <any[]>res));
   }
 
-  // Delete User function
-  deleteUser(userId: number) {
+  updateUser(userId: number, email: string): Observable<any> {
+    console.log(userId);
+    console.log(email);
     return this.http
-      .delete(`${this.usersEndpoint}${userId}`, this.httpOptions)
+      .put(
+        `${this.usersEndpoint}edituser/${userId}`,
+        { email: email },
+        this.httpOptions
+      )
       .pipe(map(res => <any[]>res));
   }
 
-  // Get Users function
-  getUsers() {
+  deleteUser(userId: number) {
+    return this.http
+      .delete(`${this.usersEndpoint}deleteuser/${userId}`, this.httpOptions)
+      .pipe(map(res => <any[]>res));
+  }
+
+  getUsers(): Observable<any> {
     return this.http
       .get(`${this.usersEndpoint}allusers`, this.httpOptions)
       .pipe(map(res => <any[]>res));
+  }
+
+  getUser(userId: number): Observable<any> {
+    return this.http
+      .get(`${this.usersEndpoint}${userId}`, this.httpOptions)
+      .pipe(map(res => <any[]>res));
+  }
+
+  setUserId(userId: number): void {
+    this.userId = userId;
+  }
+
+  getUserId(): number {
+    return this.userId;
+  }
+
+  setUserName(userName: string): void {
+    this.userName = userName;
+  }
+
+  getUserName(): string {
+    return this.userName;
+  }
+
+  setAuth(isAuth: boolean): void {
+    this.isAuthenticated = isAuth;
+  }
+
+  getAuth(): boolean {
+    return this.isAuthenticated;
+  }
+
+  setAdmin(isAdmin: boolean): void {
+    this.isAdmin = isAdmin;
+  }
+
+  getAdmin(): boolean {
+    return this.isAdmin;
   }
 }
