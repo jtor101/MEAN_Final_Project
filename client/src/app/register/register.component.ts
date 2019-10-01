@@ -74,7 +74,7 @@ export class RegisterComponent implements OnInit {
 
       // Call UserService to Register
       this.userService
-        .register(this.username, this.email, this.password)
+        .register(this.username, this.password, this.email)
         .subscribe(data => {
           if (data["error"]) {
             this.infoError = "Registration unsuccessful.";

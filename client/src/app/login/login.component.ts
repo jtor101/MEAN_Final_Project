@@ -44,10 +44,9 @@ export class LoginComponent implements OnInit {
       // Call UserService to authenticate
       this.userService.login(this.username, this.password).subscribe(data => {
         if (data["error"]) {
-          this.loginError = "Login unsuccessful.";
+          this.loginError = data["error"];
           this.error = true;
         } else {
-          console.log(data);
           this.userService.setAuth(true);
           this.userService.setUserId(data.USERID);
           this.userService.setUserName(data.USERNAME);
@@ -59,8 +58,6 @@ export class LoginComponent implements OnInit {
           }
 
           this.router.navigate(["bands"]);
-          sessionStorage.setItem("loggedIn", "true");
-          sessionStorage.setItem("username", this.username);
         }
       });
     }

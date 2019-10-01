@@ -25,6 +25,9 @@ export class AdminComponent implements OnInit {
 
   // On Init
   ngOnInit() {
+    if (!this.userService.getAuth()) {
+      this.router.navigate(["login"]);
+    }
     // Populates User Table
     this.userService.getUsers().subscribe(data => {
       data.forEach((user, index) => {
