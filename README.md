@@ -13,7 +13,7 @@ The backend utilizes a Node.js Server with Express routing to a PostgreSQL datab
 
 The frontend was originally written in JQuery for the JS Capstone, which was then converted to a Handlebars template system, which then was transformed into an Angular frontend.
 
-##Site Pages:
+## Site Pages:
 
 - Home Page (universally accessible)
 - Login Page (universally accessible)
