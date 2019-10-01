@@ -44,24 +44,24 @@ The Bands Page shows the current Leagues and Teams in the PostgreSQL database vi
 
 ### Server Start instructions:
 
-1: run npm start to start the server
-1a: to run in development mode, to use the debugger, run npm run dev to start the server
-2: $ cd server
-3: $ npm run dev
+- run npm start to start the server
+- to run in development mode, to use the debugger, run npm run dev to start the server
+- \$ cd server
+- \$ npm run dev
 
 ### PostgreSQL Setup:
 
-1: Create PostgreSQL DB hca
-2: Create a DB named hca in PostgreSQL using pgAdmin4
-3: Execute the following to build and populate the DB with test data
-4: $ cd db
-5: $ node migrate
-6: \$ node seed
+- Create PostgreSQL DB hca
+- Create a DB named hca in PostgreSQL using pgAdmin4
+- Execute the following to build and populate the DB with test data
+- \$ cd db
+- \$ node migrate
+- \$ node seed
 
 ### Client Start instructions:
 
-1: $ cd client
-2: $ ng serve
-...
-webpack: Compiled successfully.
-To view the home page in the browser, you would go to: http://localhost:4200/
+- \$ cd client
+- \$ ng serve
+  ...
+  webpack: Compiled successfully.
+  To view the home page in the browser, you would go to: http://localhost:4200/
