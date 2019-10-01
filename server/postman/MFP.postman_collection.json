@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0000fc4d-8b4d-4b50-94da-9bb1768ceab6",
+		"_postman_id": "18d89e80-562c-434b-bce7-e3ad11bec37a",
 		"name": "MFP",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -111,6 +111,25 @@
 					"path": [
 						"users",
 						"allusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET One User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"3"
 					]
 				}
 			},
@@ -244,8 +263,9 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "text/plain",
-						"type": "text"
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
@@ -253,7 +273,7 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "Bass",
+							"value": "IceMan",
 							"type": "text"
 						},
 						{
@@ -263,7 +283,7 @@
 						},
 						{
 							"key": "email",
-							"value": "bass@aol.com",
+							"value": "iceman@aol.com",
 							"type": "text"
 						}
 					],

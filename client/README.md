@@ -21,7 +21,6 @@ by John Torres (HartCode Academy 2019)
 
 - HTML5/CSS3/Bootstrap4
 - Angular
-- Node.js
 
 # Creating The App
 
