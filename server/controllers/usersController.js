@@ -46,11 +46,9 @@ Controller.loginUser = (req, res) => {
     })
     .then(userl => {
       if (userl) {
-        console.log(1);
         res.json(userl);
       } else {
-        console.log(2);
-        res.send("User not logged in.");
+        res.send({ error: "Invalid credentials" });
         res.status(403).send;
       }
     })
