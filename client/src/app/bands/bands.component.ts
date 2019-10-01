@@ -51,21 +51,24 @@ export class BandsComponent implements OnInit {
     });
   }
 
-  // Adjusts Session storage on logout
+  // Adjusts Auth/Admin settings on logout
   onLogout(): void {
-    sessionStorage.setItem("loggedIn", "false");
-    sessionStorage.setItem("username", "");
-    sessionStorage.setItem("userid", "");
+    this.userService.setAuth(false);
+    this.userService.setAdmin(false);
+    this.router.navigate(["/"]);
   }
 
+  // Admin
   goAdmin(): void {
     this.router.navigate(["/admin"]);
   }
 
+  // Edit Profile
   goEdit(): void {
     this.router.navigate(["/editprofile"]);
   }
 
+  // Gets Admin status
   getAdmin(): boolean {
     return this.userService.getAdmin();
   }

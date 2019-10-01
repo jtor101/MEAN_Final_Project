@@ -57,6 +57,7 @@ export class LoginComponent implements OnInit {
             this.userService.setAdmin(false);
           }
 
+          // Navigates to bands
           this.router.navigate(["bands"]);
         }
       });

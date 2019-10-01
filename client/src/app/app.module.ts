@@ -1,3 +1,4 @@
+// Imports
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
@@ -12,6 +13,7 @@ import { BandsComponent } from "./bands/bands.component";
 import { EditprofileComponent } from "./editprofile/editprofile.component";
 import { AdminComponent } from "./admin/admin.component";
 
+// Routers
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "register", component: RegisterComponent },

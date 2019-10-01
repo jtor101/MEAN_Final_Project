@@ -4,6 +4,7 @@
     <h1>Our Divisions</h1>
   </section>
   <!-- Nav -->
+  <!-- Admin -->
   <a
     class="btn btn-danger btn-lg col-4 offset-4 mb-3"
     id="abtn"
@@ -12,12 +13,14 @@
     *ngIf="getAdmin()"
     >Admin</a
   >
+  <!-- Edit Profile -->
   <a
     class="btn btn-warning btn-lg col-4 offset-4 mb-3"
     role="button"
     (click)="goEdit()"
     >Edit Profile</a
   >
+  <!-- Logout -->
   <a
     class="btn btn-success btn-lg col-4 offset-4"
     href=""

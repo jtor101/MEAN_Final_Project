@@ -1,16 +1,21 @@
+// Imports
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 
 import { UserService } from "./../providers/user.service";
 
+// Selector settings
 @Component({
   selector: "app-editprofile",
   templateUrl: "./editprofile.component.html",
   styleUrls: ["./editprofile.component.css"]
 })
+
+// Export
 export class EditprofileComponent implements OnInit {
   sub: any;
 
+  // Constructor
   constructor(
     private userService: UserService,
     private route: ActivatedRoute,
@@ -24,10 +29,12 @@ export class EditprofileComponent implements OnInit {
   errMsg: string = "";
   errorFound: boolean = false;
 
+  // Navigates back to /bands
   goBands(): void {
     this.router.navigate(["/bands"]);
   }
 
+  // On Init
   ngOnInit() {
     console.log(this.userService.getAuth());
     if (!this.userService.getAuth()) {
@@ -42,6 +49,7 @@ export class EditprofileComponent implements OnInit {
     });
   }
 
+  // Edit Profile primary function
   onSave(): void {
     if (this.email.trim() == "") {
       this.errMsg = "Missing Email Address.";

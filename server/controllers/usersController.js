@@ -82,8 +82,8 @@ Controller.createUser = (req, res) => {
     });
 };
 
+// POST: http://localhost:3000/users/edituser/:id
 Controller.updateUser = (req, res) => {
-  console.log("*****");
   let id = req.params.id;
   let email = req.body.email;
   console.log(`${id}: ${email}`);
@@ -104,6 +104,7 @@ Controller.updateUser = (req, res) => {
     });
 };
 
+// DELETE: http://localhost:3000/users/deleteuser/:id
 Controller.deleteUser = (req, res) => {
   let id = req.params.id;
   service
